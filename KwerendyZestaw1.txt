@@ -1,0 +1,40 @@
+Zadanie 1.
+
+CREATE TABLE postac (id_postaci int AUTO_INCREMENT, nazwa varchar(40), rodzaj SET('wiking', 'ptak', 'kobieta'), data_ur date, wiek int(3), PRIMARY KEY(id_postaci));
+
+INSERT INTO postac VALUES (1, 'Bjorn', 'wiking', '1990-12-12', 24);
+INSERT INTO postac VALUES (2, 'Drozd', 'ptak', '2009-11-12', 44);
+INSERT INTO postac VALUES (3, 'Tesciowa', 'kobieta', '1960-11-12', 1244);
+
+UPDATE postac SET wiek = 88 WHERE id_postaci=3;
+
+
+Zadanie 2.
+
+CREATE TABLE walizka (id_walizki int AUTO_INCREMENT, pojemnosc int, kolor SET('rozowy','czerwony','teczowy','zolty'), id_wlasciciela int, PRIMARY KEY(id_walizki), FOREIGN KEY(id_wlasciciela) RFERENCES postac(id_postaci) ON DELETE CASCADE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+ CREATE TABLE pracownik1 (pracownikID int AUTO_INCREMENT, nazwisko varchar(30),imie varchar(25), stanowisko int, PRIMARY KEY (pracownikID),FOREIGN KEY (stanonowisko)REFERENCES stanowisko(idStanowiska));
