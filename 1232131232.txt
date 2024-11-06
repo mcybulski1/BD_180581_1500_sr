@@ -1,0 +1,25 @@
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'RFERENCES postac(id_postaci) ON DELETE CASCADE)' at line 1
+mysql> CREATE TABLE walizka (id_walizki int AUTO_INCREMENT, pojemnosc smallint, kolor SET('rozowy','czerwony','teczowy','zolty'), id_wlasciciela int, PRIMARY KEY(id_walizki), FOREIGN KEY(id_wlasciciela) RFERENCES postac(id_postaci) ON DELETE CASCADE);
+
+
+CREATE TABLE walizka (id_walizki int AUTO_INCREMENT, pojemnosc smallint,imie kolor SET('rozowy','czerwony','teczowy','zolty'), id_wlasciciela int, PRIMARY KEY (id_walizki),FOREIGN KEY (stanonowisko)REFERENCES postac(id_postaci));
+
+
+CREATE TABLE walizka (
+    id_walizki INT AUTO_INCREMENT PRIMARY KEY,
+    pojemnosc INT UNSIGNED NOT NULL,
+    kolor ENUM('różowy', 'czerwony', 'tęczowy', 'żółty') NOT NULL,
+    id_wlasciciela INT,
+    CONSTRAINT id_wlasciciela FOREIGN KEY (id_wlasciciela) 
+        REFERENCES postac(id_postaci) 
+        ON DELETE CASCADE
+
+
+CREATE TABLE izba (adres_budynku INT, nazwa_izby varchar, metraz INT UNSIGNED, wlasciciel INT, CONSTRAINT PK_izba PRIMARY KEY (adres_budynku, nazwa_izby),FOREIGN KEY (wlasciciel) REFERENCES postac(id_postaci) ON DELETE SET NULL);
+
+ALTER TABLE izba ADD kolor_izby varchar NOT NULL DEFAULT 'czarny' AFTER metraz;
+
+
+INSERT INTO izba VALUES  ('Lesna 1', 'spizarnia', 34,'czarny', 1);
+
+CREATE TABLE  przetwory (id_przetworu INT PRIMARY KEY, rok_produkcji DATE DEFAULT '1654.01.01', id_wykonawcy int, zawartosc varchar, dodatek varchar DEFAULT 'papryczka chili, FOREIGN KEY(id_konsumenta) REFERENCES postac(id_postaci));
