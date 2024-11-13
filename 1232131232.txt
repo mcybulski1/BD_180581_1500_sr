@@ -57,4 +57,5 @@ UPDATE postac SET pesel=10000000000+id_postaci;
 ALTER TABLE postac ADD PRIMARY_KEY(pesel);
 
 
+ALTER TABLE postac MODIFY COLUMN rodzaj set('wiking','ptak','kobieta','syrena');
 
