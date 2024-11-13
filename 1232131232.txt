@@ -26,4 +26,4 @@ CREATE TABLE  przetwory (id_przetworu INT PRIMARY KEY, rok_produkcji DATE DEFAUL
 
 
 
-CREATE TABLE statek (nazwa_statku varchar(30), rodzaj_statku ENUM('Duzy','Sredni','Maly'), ;
+CREATE TABLE statek (nazwa_statku varchar(30), rodzaj_statku ENUM('Duzy','Sredni','Maly'), data_wodowania date, max_ladownosc int);
