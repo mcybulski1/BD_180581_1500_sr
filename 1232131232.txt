@@ -22,7 +22,7 @@ ALTER TABLE izba ADD kolor_izby varchar NOT NULL DEFAULT 'czarny' AFTER metraz;
 
 INSERT INTO izba VALUES  ('Lesna 1', 'spizarnia', 34,'czarny', 1);
 
-CREATE TABLE  przetwory (id_przetworu INT PRIMARY KEY, rok_produkcji DATE DEFAULT '1654.01.01', id_wykonawcy int, zawartosc varchar, dodatek varchar DEFAULT 'papryczka chili, FOREIGN KEY(id_konsumenta) REFERENCES postac(id_postaci));
+CREATE TABLE  przetwory (id_przetworu INT PRIMARY KEY, rok_produkcji DATE DEFAULT '1654.01.01', id_wykonawcy int, zawartosc varchar(40), dodatek varchar DEFAULT 'papryczka chili, FOREIGN KEY(id_konsumenta) REFERENCES postac(id_postaci));
 
 
 
