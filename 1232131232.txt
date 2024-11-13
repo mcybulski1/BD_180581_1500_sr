@@ -30,3 +30,8 @@ CREATE TABLE statek (nazwa_statku varchar(30), rodzaj_statku ENUM('Duzy','Sredni
 
 
 INSERT INTO statek VALUES ('Statek1', 'Duzy', 1653-12-12, 300),('Statek2', 'Sredni', 1900-10-11, 100),('Statek3', 'Maly', 1920-05-05, 30);
+
+
+
+
+UPDATE postac SET funkcja = 'Kapitan' WHERE id_postaci = 1;
