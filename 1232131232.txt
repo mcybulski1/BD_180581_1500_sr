@@ -59,3 +59,6 @@ ALTER TABLE postac ADD PRIMARY_KEY(pesel);
 
 ALTER TABLE postac MODIFY COLUMN rodzaj set('wiking','ptak','kobieta','syrena');
 
+INSERT INTO postac VALUES (15, 'Gertruda Nieszczera', 'syrena', '1955-01-01', 109, '12332167832');
+
+
