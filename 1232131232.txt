@@ -73,6 +73,9 @@ SELECT * FROM kreatura WHERE rodzaj = 'wiking' AND waga > 100 AND MONTH(dataUr) 
 \\\\\\\\\\\
 
 
+UPDATE statek SET max_ladownosc=0.7*max_ladownosc WHERE YEAR(data_wodowania) BETWEEN 1900 AND 1999;
+
+
 
 
 
