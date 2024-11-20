@@ -74,6 +74,14 @@ SELECT * FROM kreatura WHERE rodzaj = 'wiking' AND waga > 100 AND MONTH(dataUr) 
 
 
 UPDATE statek SET max_ladownosc=0.7*max_ladownosc WHERE YEAR(data_wodowania) BETWEEN 1900 AND 1999;
+ALTER TABLE postac ADD CHECK (wiek<=1000);
+UPDATE postac SET FK_statek='Bjorn' WHERE nazwa LIKE '%a%';
+
+INSERT INTO Marynarz SELECT * FROM postac WHERE FK_statek IS NOT NULL;
+CREATE TABLE  Marynarz LIKE postac;
+INSERT INTO postac (id_postaci, nazwa, rodzaj, data_ur, wiek, pesel) VALUES(48, 'Loko', 'waz', '1410-05-07', 887, '99933344482');
+ ALTER TABLE postac MODIFY COLUMN rodzaj enum('wiking', 'ptak', 'kobieta','syrena','waz');
+ show create table postac;
 
 
 
