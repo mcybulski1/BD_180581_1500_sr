@@ -62,3 +62,18 @@ ALTER TABLE postac MODIFY COLUMN rodzaj set('wiking','ptak','kobieta','syrena');
 INSERT INTO postac VALUES (15, 'Gertruda Nieszczera', 'syrena', '1955-01-01', 109, '12332167832');
 
 
+
+
+
+/////////////
+SELECT rodzaj,AVG(waga) FROM kreatura GROUP BY rodzaj HAVING count(nazwa)>3;
+SELECT rodzaj,count(nazwa) FROM kreatura GROUP BY rodzaj;
+SELECT * FROM kreatura WHERE rodzaj = 'wiking' AND waga > 100 AND MONTH(dataUr) BETWEEN 2 AND 6;
+
+\\\\\\\\\\\
+
+
+
+
+
+
