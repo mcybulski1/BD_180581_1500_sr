@@ -83,6 +83,7 @@ INSERT INTO postac (id_postaci, nazwa, rodzaj, data_ur, wiek, pesel) VALUES(48, 
  ALTER TABLE postac MODIFY COLUMN rodzaj enum('wiking', 'ptak', 'kobieta','syrena','waz');
  show create table postac;
 
+ UPDATE postac SET FK_statek= NULL;
 
 
 
