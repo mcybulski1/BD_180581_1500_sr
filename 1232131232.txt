@@ -136,6 +136,8 @@ select avg(waga),count(distinct rodzaj) from kreatura;
 
 select avg(YEAR(CURDATE())-YEAR(dataUr)) from kreatura;
 select nazwa ,sum(waga*ilosc) from zasob GROUP BY nazwa;
+SELECT AVG(waga), sum(waga*ilosc) from zasob where ilosc>4 AND (waga*ilosc)>10 GROUP BY nazwa;
+
 
 
 
