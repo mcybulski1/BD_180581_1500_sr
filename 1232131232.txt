@@ -130,6 +130,9 @@ SELECT rodzaj FROM zasob WHERE nazwa LIKE 'Ba%' or nazwa LIKE '%os' GROUP BY rod
 
 
 select avg(waga) from kreatura where rodzaj='wiking';
+select avg(waga),count(distinct rodzaj) from kreatura;
+
+??? - SELECT TIMESTAMPDIFF(YEAR, dataUr, CURDATE()) AS age FROM kreatura;
 
 
 
