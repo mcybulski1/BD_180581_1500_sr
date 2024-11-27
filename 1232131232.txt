@@ -129,4 +129,14 @@ SELECT rodzaj FROM zasob WHERE nazwa LIKE 'Ba%' or nazwa LIKE '%os' GROUP BY rod
 
 
 
+select avg(waga) from kreatura where rodzaj='wiking';
+
+
+
+
+
+
+
+
+
 
