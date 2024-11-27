@@ -134,6 +134,8 @@ select avg(waga),count(distinct rodzaj) from kreatura;
 
 ??? - SELECT TIMESTAMPDIFF(YEAR, dataUr, CURDATE()) AS age FROM kreatura;
 
+select avg(YEAR(CURDATE())-YEAR(dataUr)) from kreatura;
+select nazwa ,sum(waga*ilosc) from zasob GROUP BY nazwa;
 
 
 
