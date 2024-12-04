@@ -137,6 +137,13 @@ select avg(waga),count(distinct rodzaj) from kreatura;
 select avg(YEAR(CURDATE())-YEAR(dataUr)) from kreatura;
 select nazwa ,sum(waga*ilosc) from zasob GROUP BY nazwa;
 SELECT AVG(waga), sum(waga*ilosc) from zasob where ilosc>4 AND (waga*ilosc)>10 GROUP BY nazwa;
+SELECT COUNT(DISTINCT nazwa) AS i, rodzaj from zasob GROUP BY rodzaj HAVING i > 1;
+SELECT nazwa, idZasobu, ilosc FROM kreatura k INNER JOIN ekwipunek e ON k.idKreatury=e.idKreatury;
+'''
+
+SELECT k.nazwa, z.nazwa FROM kreatura k INNER JOIN ekwipunek e INNER JOIN zasob z ON k.idKreatury=e.idEkwipunku=z.idZasobu;
+///
+SELECT k.nazwa, z.nazwa FROM kreatura k INNER JOIN ekwipunek e INNER JOIN zasob z ON k.idKreatury=e.idKreatury=z.idZasobu;
 
 
 
