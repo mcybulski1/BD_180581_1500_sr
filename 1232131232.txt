@@ -151,6 +151,29 @@ SELECT k.nazwa, z.nazwa FROM kreatura k INNER JOIN ekwipunek e INNER JOIN zasob 
 
 
 
+ select kreatura.nazwa, ekwipunek.ilosc  from kreatura left join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury WHERE ekwipunek.idEkwipunku is null;
+
+
+
+SELECT kreatura.nazwa, ekwipunek.idZasobu from kreatura left join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury WHERE
+kreatura.dataUr LIKE '%167%' AND rodzaj = 'wiking';
+
+
+
+SELECT kreatura.nazwa from kreatura left join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury left join zasob on ekwipunek.idZasobu = zasob.idZasobu WHERE zasob.rodzaj='jedzenie' LIMIT 5;
+
+
+SELECT concat(A.nazwa,'-', B.nazwa) from kreatura A, kreatur
+a B WHERE A.idKreatury- B.idKreatury = -5;
+
+
+
+
+
+
+
+
+
 
 
 
