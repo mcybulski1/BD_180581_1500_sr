@@ -166,6 +166,8 @@ SELECT kreatura.nazwa from kreatura left join ekwipunek on kreatura.idKreatury =
 SELECT concat(A.nazwa,'-', B.nazwa) from kreatura A, kreatura B WHERE A.idKreatury- B.idKreatury = -5;
 
 
+SELECT kreatura.rodzaj, AVG(zasob.waga) from kreatura left join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury left join zasob on ekwipunek.idZasobu = zasob.idZasobu WHERE ekwipunek.ilosc<30 AND kreatura.rodzaj!='malpa'|'waz' GROUP BY rodzaj;
+
 
 
 
