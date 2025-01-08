@@ -170,6 +170,15 @@ SELECT kreatura.rodzaj, AVG(zasob.waga) from kreatura left join ekwipunek on kre
 
 
 
+create table cybulskim.kreatura AS SELECT * FROM wikingowie.kreatura;
+CREATE TABLE cybulskim.uczestnicy AS SELECT * FROM wikingowie.uczestnicy;
+CREATE TABLE cybulskim.etapy_wyprawy AS SELECT * FROM wikingowie.etapy_wyprawy;
+CREATE TABLE cybulskim.sektor AS SELECT * FROM wikingowie.sektor;
+CREATE TABLE cybulskim.wyprawa AS SELECT * FROM wikingowie.wyprawa;
+
+select kreatura.nazwa from kreatura left join uczestnicy on kreatura.idKreatury = uczestnicy.id_uczestnika WHERE uczestnicy.id_uczestnika IS NULL;
+
+        !!!   SELECT wyprawa.nazwa, SUM(ekwipunek.ilosc) FROM wyprawa INNER JOIN ekwipunek ON wyprawa.id_wyprawy = ekwipunek.idEkwipunku INNER JOIN kreatura ON ekwipunek.idEkwipunku = kreatura.idKreatury; - !!!
 
 
 
