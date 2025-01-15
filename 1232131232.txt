@@ -181,7 +181,7 @@ select kreatura.nazwa from kreatura left join uczestnicy on kreatura.idKreatury 
         !!!   SELECT wyprawa.nazwa, SUM(ekwipunek.ilosc) FROM wyprawa INNER JOIN ekwipunek ON wyprawa.id_wyprawy = ekwipunek.idEkwipunku INNER JOIN kreatura ON ekwipunek.idEkwipunku = kreatura.idKreatury; - !!!
 
 
-
+SELECT...FROM...WHERE...GROUP BY...ORDER BY...LIMIT
 
 
 
