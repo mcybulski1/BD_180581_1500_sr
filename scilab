@@ -1,0 +1,233 @@
+1.         
+1. Podstawowe operacje matematyczne:
+
++  - dodawanie
+
+-  - odejmowanie
+
+*  - mnożenie
+
+/  - dzielenie
+
+^  - potęgowanie
+
+sqrt(x)  - pierwiastek kwadratowy
+
+abs(x)  - wartość bezwzględna
+
+exp(x)  - funkcja wykładnicza (e^x)
+
+log(x)  - logarytm naturalny (ln)
+
+log10(x)  - logarytm dziesiętny
+
+sin(x), cos(x), tan(x)  - funkcje trygonometryczne
+
+2. Zmienne i macierze:
+
+a = 5;  - przypisanie wartości
+
+A = [1, 2; 3, 4];  - macierz 2x2
+
+size(A)  - rozmiar macierzy
+
+length(A)  - długość macierzy
+
+det(A)  - wyznacznik macierzy
+
+inv(A)  - macierz odwrotna
+
+eye(n)  - macierz jednostkowa n x n
+
+zeros(m, n)  - macierz zerowa m x n
+
+ones(m, n)  - macierz jedynek m x n
+
+3. Operacje na macierzach:
+
+A'  - transpozycja macierzy
+
+A .* B  - mnożenie element po elemencie
+
+A ./ B  - dzielenie element po elemencie
+
+A .^ 2  - potęgowanie element po elemencie
+
+diag(A)  - diagonalna macierzy
+
+rand(m, n)  - macierz losowa m x n
+
+4. Funkcje sterujące przepływem:
+
+if warunek then ... else ... end  - instrukcja warunkowa
+
+for i=1:n ... end  - pętla for
+
+while warunek ... end  - pętla while
+
+5. Rysowanie wykresów:
+
+x = linspace(0, 10, 100);  - wektor o 100 elementach
+
+y = sin(x);  - obliczenie wartości sinus dla x
+
+plot(x, y)  - rysowanie wykresu
+
+title("Tytuł")  - tytuł wykresu
+
+xlabel("Oś X")  - opis osi X
+
+ylabel("Oś Y")  - opis osi Y
+
+legend("sinus")  - legenda
+
+6. Funkcje pomocnicze:
+
+help nazwa_funkcji  - pomoc dotycząca funkcji
+
+clc  - czyszczenie ekranu
+
+clear  - usunięcie zmiennych z pamięci
+
+disp("tekst")  - wyświetlenie tekstu
+
+input("Podaj wartość:")  - pobranie danych od użytkownika
+
+7. Praca z plikami:
+
+save('plik.dat', A)  - zapis do pliku
+
+load('plik.dat')  - wczytanie z pliku
+
+csvWrite(A, 'plik.csv')  - zapis do pliku CSV
+
+csvRead('plik.csv')  - wczytanie pliku CSV
+
+
+
+2.
+1. Podstawowe operacje matematyczne:
+
++  - dodawanie
+
+-  - odejmowanie
+
+*  - mnożenie
+
+/  - dzielenie
+
+^  - potęgowanie
+
+sqrt(x)  - pierwiastek kwadratowy
+
+abs(x)  - wartość bezwzględna
+
+exp(x)  - funkcja wykładnicza (e^x)
+
+log(x)  - logarytm naturalny (ln)
+
+log10(x)  - logarytm dziesiętny
+
+sin(x), cos(x), tan(x)  - funkcje trygonometryczne
+
+2. Zmienne i macierze:
+
+a = 5;  - przypisanie wartości
+
+A = [1, 2; 3, 4];  - macierz 2x2
+
+size(A)  - rozmiar macierzy
+
+length(A)  - długość macierzy
+
+det(A)  - wyznacznik macierzy
+
+inv(A)  - macierz odwrotna
+
+eye(n)  - macierz jednostkowa n x n
+
+zeros(m, n)  - macierz zerowa m x n
+
+ones(m, n)  - macierz jedynek m x n
+
+3. Operacje na macierzach:
+
+A'  - transpozycja macierzy
+
+A .* B  - mnożenie element po elemencie
+
+A ./ B  - dzielenie element po elemencie
+
+A .^ 2  - potęgowanie element po elemencie
+
+diag(A)  - diagonalna macierzy
+
+rand(m, n)  - macierz losowa m x n
+
+sum(A, "c")  - suma kolumn
+
+sum(A, "r")  - suma wierszy
+
+max(A)  - maksymalny element macierzy
+
+min(A)  - minimalny element macierzy
+
+4. Funkcje sterujące przepływem:
+
+if warunek then ... else ... end  - instrukcja warunkowa
+
+for i=1:n ... end  - pętla for
+
+while warunek ... end  - pętla while
+
+select case wyrazenie case wartosc then ... else ... end  - instrukcja wyboru
+
+5. Rysowanie wykresów:
+
+x = linspace(0, 10, 100);  - wektor o 100 elementach
+
+y = sin(x);  - obliczenie wartości sinus dla x
+
+plot(x, y)  - rysowanie wykresu
+
+title("Tytuł")  - tytuł wykresu
+
+xlabel("Oś X")  - opis osi X
+
+ylabel("Oś Y")  - opis osi Y
+
+legend("sinus")  - legenda
+
+subplot(m, n, p)  - podział wykresu na m x n i rysowanie w pozycji p
+
+hold on/off  - nakładanie wykresów
+
+6. Funkcje pomocnicze:
+
+help nazwa_funkcji  - pomoc dotycząca funkcji
+
+clc  - czyszczenie ekranu
+
+clear  - usunięcie zmiennych z pamięci
+
+disp("tekst")  - wyświetlenie tekstu
+
+input("Podaj wartość:")  - pobranie danych od użytkownika
+
+error("komunikat")  - zgłoszenie błędu
+
+7. Praca z plikami:
+
+save('plik.dat', A)  - zapis do pliku
+
+load('plik.dat')  - wczytanie z pliku
+
+csvWrite(A, 'plik.csv')  - zapis do pliku CSV
+
+csvRead('plik.csv')  - wczytanie pliku CSV
+
+fopen('plik.txt', 'w')  - otwarcie pliku do zapisu
+
+fprintf(fid, "format", dane)  - zapis danych do pliku
+
+fclose(fid)  - zamknięcie pliku
